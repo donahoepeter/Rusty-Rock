@@ -1,293 +1,419 @@
 'use client';
 
+import { useState } from 'react';
 import { motion } from 'framer-motion';
-import Image from 'next/image';
-import { Mail, Phone, MapPin, Linkedin, Calendar } from 'lucide-react';
-import Link from 'next/link';
+import { CheckCircle, Calendar, Clock, DollarSign, Users } from 'lucide-react';
 
 export default function Contact() {
-  const founders = [
-    {
-      name: "Peter Donahoe",
-      role: "Co-Founder & DMV Region Lead",
-      image: "/peter-profile.jpeg",
-      bio: "Peter is passionate about helping local businesses succeed online. Based in the DMV area, he specializes in creating user-friendly websites that drive real business results for local companies using modern tools and AI-powered solutions.",
-      region: "Washington DC, Maryland, Virginia",
-      email: "peter@rustyrock.dev",
-      phone: "+1 (555) 123-4567",
-      linkedin: "https://linkedin.com/in/peterdonahoe",
-      specialties: ["E-commerce Development", "Local SEO", "Digital Marketing", "User Interface Design"]
-    },
-    {
-      name: "Thomas Rust",
-      role: "Co-Founder & New England Region Lead",
-      image: "/thomas-profile.jpeg",
-      bio: "Thomas has a passion for helping small businesses succeed online. Covering the New England area, he focuses on building fast, secure websites using the latest technologies and AI tools to deliver professional results quickly and affordably.",
-      region: "Massachusetts, Connecticut, Rhode Island, New Hampshire, Vermont, Maine",
-      email: "thomas@rustyrock.dev",
-      phone: "+1 (555) 987-6543",
-      linkedin: "https://linkedin.com/in/thomasrust",
-      specialties: ["Full-Stack Development", "AI Integration", "Performance Optimization", "Security"]
-    }
-  ];
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    business: '',
+    website: '',
+    projectType: '',
+    budget: '',
+    timeline: '',
+    region: '',
+    description: '',
+    hearAbout: ''
+  });
+
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    // Simulate form submission
+    await new Promise(resolve => setTimeout(resolve, 1500));
+
+    setIsSubmitted(true);
+    setIsSubmitting(false);
+  };
+
+  if (isSubmitted) {
+    return (
+      <div className="min-h-screen bg-white flex items-center justify-center">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+          className="max-w-2xl mx-auto px-4 text-center"
+        >
+          <div className="bg-green-50 border-2 border-green-200 rounded-2xl p-12">
+            <div className="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
+              <CheckCircle className="w-10 h-10 text-white" />
+            </div>
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">Thank You!</h1>
+            <p className="text-xl text-gray-700 mb-8">
+              We&apos;ve received your consultation request. One of our founders will reach out to you within 24 hours to schedule your free consultation.
+            </p>
+            <div className="space-y-4 text-left bg-white p-6 rounded-xl border border-green-200">
+              <h3 className="text-lg font-semibold text-gray-900 mb-4">What happens next?</h3>
+              <div className="space-y-3">
+                <div className="flex items-start space-x-3">
+                  <div className="w-6 h-6 bg-red-600 text-white rounded-full flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">1</div>
+                  <p className="text-gray-700">We&apos;ll contact you within 24 hours to schedule your consultation</p>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-6 h-6 bg-red-600 text-white rounded-full flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">2</div>
+                  <p className="text-gray-700">During the call, we&apos;ll discuss your project in detail</p>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-6 h-6 bg-red-600 text-white rounded-full flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">3</div>
+                  <p className="text-gray-700">You&apos;ll receive a custom proposal with transparent pricing</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-red-50 to-white">
-        <div className="max-w-4xl mx-auto px-4 text-center">
+      <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-red-600/10 to-blue-600/10"></div>
+        <div className="max-w-4xl mx-auto px-4 text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-5xl font-bold text-gray-900 mb-6">
-              Meet the <span className="text-red-600">Team</span>
+            <h1 className="text-5xl font-bold text-white mb-6">
+              <span className="text-red-600">Contact</span> Us
             </h1>
-            <p className="text-xl text-gray-600 leading-relaxed">
-              Get to know the people behind Rusty Rock. We&apos;re not hiding behind corporate walls -
-              when you work with us, you work directly with the founders.
+            <p className="text-xl text-gray-200 leading-relaxed mb-8">
+              Let&apos;s discuss your project and create a custom solution that fits your budget and timeline.
+              No pressure, no obligation - just honest advice from real experts.
             </p>
-          </motion.div>
-        </div>
-      </section>
 
-      {/* Founders Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="space-y-16">
-            {founders.map((founder, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.2 }}
-                className="grid lg:grid-cols-2 gap-12 items-center"
-              >
-                <div className={index % 2 === 1 ? 'lg:order-2' : ''}>
-                  <div className="relative">
-                    <div className="aspect-square rounded-2xl overflow-hidden shadow-xl">
-                      <Image
-                        src={founder.image}
-                        alt={founder.name}
-                        width={600}
-                        height={600}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <div className="absolute -bottom-4 -right-4 bg-red-600 text-white p-4 rounded-xl shadow-lg">
-                      <MapPin className="w-6 h-6" />
-                    </div>
-                  </div>
+            {/* Benefits */}
+            <div className="grid md:grid-cols-3 gap-6 max-w-3xl mx-auto">
+              {[
+                { icon: <DollarSign className="w-6 h-6" />, text: "100% Free Consultation" },
+                { icon: <Clock className="w-6 h-6" />, text: "24-Hour Response Time" },
+                { icon: <Users className="w-6 h-6" />, text: "Direct Founder Contact" }
+              ].map((benefit, index) => (
+                <div key={index} className="flex items-center justify-center space-x-2 text-red-600">
+                  {benefit.icon}
+                  <span className="font-medium">{benefit.text}</span>
                 </div>
-
-                <div className={index % 2 === 1 ? 'lg:order-1' : ''}>
-                  <div className="space-y-6">
-                    <div>
-                      <h2 className="text-4xl font-bold text-gray-900 mb-2">{founder.name}</h2>
-                      <p className="text-xl text-red-600 font-semibold mb-4">{founder.role}</p>
-                      <div className="flex items-center text-gray-600 mb-6">
-                        <MapPin className="w-5 h-5 mr-2 text-red-600" />
-                        <span>Serving: {founder.region}</span>
-                      </div>
-                    </div>
-
-                    <p className="text-lg text-gray-700 leading-relaxed">{founder.bio}</p>
-
-                    <div className="grid grid-cols-2 gap-4">
-                      <div>
-                        <h4 className="font-semibold text-gray-900 mb-3">Specialties:</h4>
-                        <ul className="space-y-2">
-                          {founder.specialties.map((specialty, idx) => (
-                            <li key={idx} className="text-gray-600 flex items-center">
-                              <div className="w-2 h-2 bg-red-600 rounded-full mr-3"></div>
-                              {specialty}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </div>
-
-                    <div className="flex flex-wrap gap-4 pt-4">
-                      <a
-                        href={`mailto:${founder.email}`}
-                        className="flex items-center bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg transition-colors duration-200"
-                      >
-                        <Mail className="w-5 h-5 mr-2" />
-                        Email
-                      </a>
-                      <a
-                        href={`tel:${founder.phone}`}
-                        className="flex items-center border-2 border-red-600 text-red-600 hover:bg-red-600 hover:text-white px-6 py-3 rounded-lg transition-colors duration-200"
-                      >
-                        <Phone className="w-5 h-5 mr-2" />
-                        Call
-                      </a>
-                      <a
-                        href={founder.linkedin}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center border border-gray-300 text-gray-600 hover:bg-gray-50 px-6 py-3 rounded-lg transition-colors duration-200"
-                      >
-                        <Linkedin className="w-5 h-5 mr-2" />
-                        LinkedIn
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Options Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Get in Touch</h2>
-            <p className="text-xl text-gray-600">Choose the best way to reach us</p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="text-center p-8 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-200"
-            >
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-red-100 rounded-full mb-6">
-                <Calendar className="w-8 h-8 text-red-600" />
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Free Consultation</h3>
-              <p className="text-gray-600 mb-6 leading-relaxed">
-                Schedule a no-obligation consultation to discuss your project and get a custom quote.
-              </p>
-              <Link
-                href="/consultation"
-                className="inline-block bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200"
-              >
-                Book Consultation
-              </Link>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-center p-8 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-200"
-            >
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-red-100 rounded-full mb-6">
-                <Mail className="w-8 h-8 text-red-600" />
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Email Us</h3>
-              <p className="text-gray-600 mb-6 leading-relaxed">
-                Send us an email with your project details and we&apos;ll get back to you within 24 hours.
-              </p>
-              <a
-                href="mailto:hello@rustyrock.dev"
-                className="inline-block border-2 border-red-600 text-red-600 hover:bg-red-600 hover:text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200"
-              >
-                Send Email
-              </a>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-center p-8 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-200"
-            >
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-red-100 rounded-full mb-6">
-                <Phone className="w-8 h-8 text-red-600" />
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Call Us</h3>
-              <p className="text-gray-600 mb-6 leading-relaxed">
-                Prefer to talk? Call us directly to discuss your project over the phone.
-              </p>
-              <div className="space-y-2">
-                <div>
-                  <p className="text-sm text-gray-500">DMV Area (Peter)</p>
-                  <a
-                    href="tel:+15551234567"
-                    className="text-red-600 hover:text-red-700 font-semibold"
-                  >
-                    (555) 123-4567
-                  </a>
-                </div>
-                <div>
-                  <p className="text-sm text-gray-500">New England (Thomas)</p>
-                  <a
-                    href="tel:+15559876543"
-                    className="text-red-600 hover:text-red-700 font-semibold"
-                  >
-                    (555) 987-6543
-                  </a>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Service Areas */}
-      <section className="py-20">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h2 className="text-4xl font-bold text-gray-900 mb-8">Our Service Areas</h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="p-8 bg-red-50 rounded-xl">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">DMV Area</h3>
-                <p className="text-gray-600 mb-4">Led by Peter Donahoe</p>
-                <ul className="text-left space-y-2 text-gray-700">
-                  <li>• Washington, DC</li>
-                  <li>• Maryland</li>
-                  <li>• Northern Virginia</li>
-                </ul>
-              </div>
-
-              <div className="p-8 bg-red-50 rounded-xl">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">New England</h3>
-                <p className="text-gray-600 mb-4">Led by Thomas Rust</p>
-                <ul className="text-left space-y-2 text-gray-700">
-                  <li>• Massachusetts</li>
-                  <li>• Connecticut</li>
-                  <li>• Rhode Island</li>
-                  <li>• New Hampshire</li>
-                  <li>• Vermont</li>
-                  <li>• Maine</li>
-                </ul>
-              </div>
+              ))}
             </div>
-            <p className="text-gray-600 mt-8">
-              Outside these areas? We still work with clients nationwide remotely.
-            </p>
           </motion.div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-red-50">
-        <div className="max-w-4xl mx-auto text-center px-4">
+      {/* Form Section */}
+      <section className="py-20 bg-gradient-to-br from-white via-gray-50 to-red-50">
+        <div className="max-w-3xl mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            <form onSubmit={handleSubmit} className="bg-gradient-to-br from-white to-gray-50 shadow-2xl rounded-2xl p-8 md:p-12 border border-red-100">
+              <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Tell Us About Your Project</h2>
+
+              <div className="grid md:grid-cols-2 gap-6 mb-6">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
+                    Your Name *
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    value={formData.name}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-red-200 focus:border-red-500 transition-all duration-300 bg-gradient-to-r from-white to-gray-50 hover:border-red-300"
+                    placeholder="Enter your full name"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
+                    Email Address *
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    value={formData.email}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-red-200 focus:border-red-500 transition-all duration-300 bg-gradient-to-r from-white to-gray-50 hover:border-red-300"
+                    placeholder="your.email@example.com"
+                  />
+                </div>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-6 mb-6">
+                <div>
+                  <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-2">
+                    Phone Number *
+                  </label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    required
+                    value={formData.phone}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-red-200 focus:border-red-500 transition-all duration-300 bg-gradient-to-r from-white to-gray-50 hover:border-red-300"
+                    placeholder="(555) 123-4567"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="business" className="block text-sm font-semibold text-gray-700 mb-2">
+                    Business Name *
+                  </label>
+                  <input
+                    type="text"
+                    id="business"
+                    name="business"
+                    required
+                    value={formData.business}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-red-200 focus:border-red-500 transition-all duration-300 bg-gradient-to-r from-white to-gray-50 hover:border-red-300"
+                    placeholder="Your business name"
+                  />
+                </div>
+              </div>
+
+              <div className="mb-6">
+                <label htmlFor="website" className="block text-sm font-semibold text-gray-700 mb-2">
+                  Current Website (if any)
+                </label>
+                <input
+                  type="url"
+                  id="website"
+                  name="website"
+                  value={formData.website}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-red-200 focus:border-red-500 transition-all duration-300 bg-gradient-to-r from-white to-gray-50 hover:border-red-300"
+                  placeholder="https://yourwebsite.com"
+                />
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-6 mb-6">
+                <div>
+                  <label htmlFor="projectType" className="block text-sm font-semibold text-gray-700 mb-2">
+                    Project Type *
+                  </label>
+                  <select
+                    id="projectType"
+                    name="projectType"
+                    required
+                    value={formData.projectType}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-red-200 focus:border-red-500 transition-all duration-300 bg-gradient-to-r from-white to-gray-50 hover:border-red-300"
+                  >
+                    <option value="">Select project type</option>
+                    <option value="new-website">New Website</option>
+                    <option value="website-redesign">Website Redesign</option>
+                    <option value="ecommerce">E-commerce Store</option>
+                    <option value="mobile-app">Mobile App</option>
+                    <option value="seo-services">SEO Services</option>
+                    <option value="maintenance">Website Maintenance</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label htmlFor="budget" className="block text-sm font-semibold text-gray-700 mb-2">
+                    Budget Range *
+                  </label>
+                  <select
+                    id="budget"
+                    name="budget"
+                    required
+                    value={formData.budget}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-red-200 focus:border-red-500 transition-all duration-300 bg-gradient-to-r from-white to-gray-50 hover:border-red-300"
+                  >
+                    <option value="">Select budget range</option>
+                    <option value="under-2k">Under $2,000</option>
+                    <option value="2k-5k">$2,000 - $5,000</option>
+                    <option value="5k-10k">$5,000 - $10,000</option>
+                    <option value="10k-20k">$10,000 - $20,000</option>
+                    <option value="20k-plus">$20,000+</option>
+                    <option value="not-sure">Not sure yet</option>
+                  </select>
+                </div>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-6 mb-6">
+                <div>
+                  <label htmlFor="timeline" className="block text-sm font-semibold text-gray-700 mb-2">
+                    Desired Timeline *
+                  </label>
+                  <select
+                    id="timeline"
+                    name="timeline"
+                    required
+                    value={formData.timeline}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-red-200 focus:border-red-500 transition-all duration-300 bg-gradient-to-r from-white to-gray-50 hover:border-red-300"
+                  >
+                    <option value="">Select timeline</option>
+                    <option value="asap">ASAP (Rush job)</option>
+                    <option value="1-2weeks">1-2 weeks</option>
+                    <option value="1month">Within 1 month</option>
+                    <option value="2-3months">2-3 months</option>
+                    <option value="flexible">I&apos;m flexible</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label htmlFor="region" className="block text-sm font-semibold text-gray-700 mb-2">
+                    Your Location *
+                  </label>
+                  <select
+                    id="region"
+                    name="region"
+                    required
+                    value={formData.region}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-red-200 focus:border-red-500 transition-all duration-300 bg-gradient-to-r from-white to-gray-50 hover:border-red-300"
+                  >
+                    <option value="">Select your region</option>
+                    <option value="dmv">DMV Area (DC/MD/VA)</option>
+                    <option value="new-england">New England</option>
+                    <option value="other-us">Other US Location</option>
+                    <option value="international">International</option>
+                  </select>
+                </div>
+              </div>
+
+              <div className="mb-6">
+                <label htmlFor="description" className="block text-sm font-semibold text-gray-700 mb-2">
+                  Project Description *
+                </label>
+                <textarea
+                  id="description"
+                  name="description"
+                  required
+                  rows={6}
+                  value={formData.description}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-red-200 focus:border-red-500 transition-all duration-300 bg-gradient-to-r from-white to-gray-50 hover:border-red-300 resize-none"
+                  placeholder="Please describe your project goals, target audience, key features needed, and any specific requirements or challenges you&apos;re facing."
+                />
+              </div>
+
+              <div className="mb-8">
+                <label htmlFor="hearAbout" className="block text-sm font-semibold text-gray-700 mb-2">
+                  How did you hear about us?
+                </label>
+                <select
+                  id="hearAbout"
+                  name="hearAbout"
+                  value={formData.hearAbout}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-red-200 focus:border-red-500 transition-all duration-300 bg-gradient-to-r from-white to-gray-50 hover:border-red-300"
+                >
+                  <option value="">Select an option</option>
+                  <option value="google">Google Search</option>
+                  <option value="referral">Referral from friend/colleague</option>
+                  <option value="social-media">Social Media</option>
+                  <option value="advertising">Online Advertising</option>
+                  <option value="networking">Networking Event</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <motion.button
+                type="submit"
+                disabled={isSubmitting}
+                className="w-full bg-gradient-to-r from-red-500 to-red-700 hover:from-red-600 hover:to-red-800 disabled:opacity-50 text-white py-5 px-8 rounded-xl text-xl font-bold transition-all duration-300 transform hover:scale-105 disabled:transform-none flex items-center justify-center gap-3 shadow-lg hover:shadow-2xl"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                {isSubmitting ? (
+                  <>
+                    <div className="animate-spin rounded-full h-5 w-5 border-2 border-white border-t-transparent"></div>
+                    Submitting...
+                  </>
+                ) : (
+                  <>
+                    <Calendar className="w-5 h-5" />
+                    Schedule Free Consultation
+                  </>
+                )}
+              </motion.button>
+
+              <p className="text-center text-sm text-gray-600 mt-4">
+                By submitting this form, you agree to be contacted by Rusty Rock about your project.
+                We respect your privacy and will never share your information.
+              </p>
+            </form>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Trust Section */}
+      <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 relative">
+        <div className="absolute inset-0 bg-gradient-to-r from-red-600/10 to-blue-600/10"></div>
+        <div className="max-w-4xl mx-auto px-4 text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Ready to Start Your Project?</h2>
-            <p className="text-xl text-gray-600 mb-8">
-              Don&apos;t wait - great websites drive real results. Let&apos;s build yours today.
-            </p>
-            <Link
-              href="/consultation"
-              className="inline-block bg-red-600 hover:bg-red-700 text-white px-10 py-5 rounded-lg text-xl font-semibold transition-colors duration-200"
-            >
-              Get Your Free Consultation
-            </Link>
+            <h2 className="text-3xl font-bold text-white mb-8">Why Choose Our Free Consultation?</h2>
+            <div className="grid md:grid-cols-3 gap-8">
+              {[
+                {
+                  icon: <Users className="w-8 h-8 text-red-600" />,
+                  title: "Direct Founder Access",
+                  description: "You'll speak directly with Thomas or Peter, not a sales rep."
+                },
+                {
+                  icon: <Clock className="w-8 h-8 text-red-600" />,
+                  title: "No Time Wasted",
+                  description: "We'll quickly assess if we're a good fit for your project."
+                },
+                {
+                  icon: <DollarSign className="w-8 h-8 text-red-600" />,
+                  title: "Transparent Pricing",
+                  description: "Get honest, upfront pricing with no hidden fees."
+                }
+              ].map((item, index) => (
+                <motion.div
+                  key={index}
+                  className="text-center p-6 bg-white/95 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-xl transition-all duration-200"
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br ${
+                    index === 0 ? 'from-purple-500 to-purple-700' :
+                    index === 1 ? 'from-blue-500 to-blue-700' :
+                    'from-green-500 to-green-700'
+                  } rounded-full mb-4 shadow-lg`}>
+                    <Users className={`w-8 h-8 text-white ${index === 0 ? '' : 'hidden'}`} />
+                    <Clock className={`w-8 h-8 text-white ${index === 1 ? '' : 'hidden'}`} />
+                    <DollarSign className={`w-8 h-8 text-white ${index === 2 ? '' : 'hidden'}`} />
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{item.title}</h3>
+                  <p className="text-gray-600">{item.description}</p>
+                </motion.div>
+              ))}
+            </div>
           </motion.div>
         </div>
       </section>

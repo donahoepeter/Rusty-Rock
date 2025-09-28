@@ -14,7 +14,6 @@ export default function Navigation() {
     { href: '/about', label: 'About' },
     { href: '/services', label: 'Services' },
     { href: '/contact', label: 'Contact' },
-    { href: '/consultation', label: 'Free Consultation' },
   ];
 
   const isActive = (href: string) => {

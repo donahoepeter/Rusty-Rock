@@ -92,23 +92,24 @@ export default function Services() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-red-50 to-white">
-        <div className="max-w-4xl mx-auto px-4 text-center">
+      <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-red-600/10 to-blue-600/10"></div>
+        <div className="max-w-4xl mx-auto px-4 text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-5xl font-bold text-gray-900 mb-6">
+            <h1 className="text-5xl font-bold text-white mb-6">
               Our <span className="text-red-600">Services</span>
             </h1>
-            <p className="text-xl text-gray-600 leading-relaxed mb-8">
+            <p className="text-xl text-gray-200 leading-relaxed mb-8">
               Comprehensive web solutions designed specifically for local businesses.
               From simple websites to complex e-commerce platforms, we&apos;ve got you covered.
             </p>
             <Link
-              href="/consultation"
-              className="inline-flex items-center bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-200 gap-2"
+              href="/contact"
+              className="inline-flex items-center bg-white hover:bg-gray-100 text-red-600 px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-200 gap-2 shadow-lg hover:shadow-xl"
             >
               Get Started Today <ArrowRight size={20} />
             </Link>
@@ -117,7 +118,7 @@ export default function Services() {
       </section>
 
       {/* Services Grid */}
-      <section className="py-20">
+      <section className="py-20 bg-gradient-to-br from-white via-gray-50 to-red-50">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">What We Offer</h2>
@@ -165,11 +166,12 @@ export default function Services() {
       </section>
 
       {/* Process Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-4">
+      <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 relative">
+        <div className="absolute inset-0 bg-gradient-to-r from-red-600/10 to-blue-600/10"></div>
+        <div className="max-w-6xl mx-auto px-4 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Process</h2>
-            <p className="text-xl text-gray-600">A streamlined approach that delivers results</p>
+            <h2 className="text-4xl font-bold text-white mb-4">Our Process</h2>
+            <p className="text-xl text-gray-200">A streamlined approach that delivers results</p>
           </div>
 
           <div className="space-y-8">
@@ -182,7 +184,7 @@ export default function Services() {
                 className="flex flex-col lg:flex-row items-center gap-8"
               >
                 <div className={`flex-1 ${index % 2 === 1 ? 'lg:order-2' : ''}`}>
-                  <div className="bg-white p-8 rounded-xl shadow-lg">
+                  <div className="bg-white/95 backdrop-blur-sm p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-200">
                     <div className="flex items-center mb-4">
                       <div className="w-12 h-12 bg-red-600 text-white rounded-full flex items-center justify-center font-bold text-lg mr-4">
                         {step.step}
@@ -203,7 +205,7 @@ export default function Services() {
       </section>
 
       {/* Features Section */}
-      <section className="py-20">
+      <section className="py-20 bg-gradient-to-br from-red-50 via-white to-gray-50">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose Our Services</h2>
@@ -252,28 +254,29 @@ export default function Services() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-red-50">
-        <div className="max-w-4xl mx-auto text-center px-4">
+      <section className="py-20 bg-gradient-to-br from-red-600 via-red-700 to-red-800 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/20 to-slate-900/20"></div>
+        <div className="max-w-4xl mx-auto text-center px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Ready to Transform Your Online Presence?</h2>
-            <p className="text-xl text-gray-600 mb-8">
+            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Online Presence?</h2>
+            <p className="text-xl text-red-100 mb-8">
               Let&apos;s discuss how our services can help grow your business.
               Free consultation with no obligation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="/consultation"
-                className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-200"
+                href="/contact"
+                className="bg-white hover:bg-gray-100 text-red-600 px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-200 shadow-lg hover:shadow-xl"
               >
                 Get Free Consultation
               </Link>
               <Link
                 href="/contact"
-                className="border-2 border-red-600 text-red-600 hover:bg-red-600 hover:text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-200"
+                className="border-2 border-white text-white hover:bg-white hover:text-red-600 px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-200"
               >
                 Contact Us
               </Link>

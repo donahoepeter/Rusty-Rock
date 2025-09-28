@@ -10,7 +10,7 @@ export default function Home() {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section
-        className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900"
+        className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800"
         style={{
           backgroundImage: 'url("data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Ccircle cx="30" cy="30" r="1"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")',
         }}
@@ -42,7 +42,7 @@ export default function Home() {
               className="text-xl md:text-2xl text-gray-700 mb-8 max-w-3xl mx-auto leading-relaxed"
             >
               Professional websites for local businesses. Built with <span className="text-red-600 font-semibold">trust</span>,
-              delivered with <span className="text-red-600 font-semibold">speed</span>, powered by <span className="text-red-600 font-semibold">AI</span>.
+              delivered with <span className="text-red-600 font-semibold">speed</span>, powered by <span className="text-red-600 font-semibold">real people</span>.
             </motion.p>
 
             <motion.div
@@ -52,7 +52,7 @@ export default function Home() {
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
             >
               <Link
-                href="/consultation"
+                href="/contact"
                 className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-200 transform hover:scale-105 flex items-center gap-2 shadow-lg"
               >
                 Get Free Consultation <ArrowRight size={20} />
@@ -69,7 +69,7 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gradient-to-br from-white via-gray-50 to-red-50">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose <span className="text-red-600">Rusty Rock</span>?</h2>
@@ -118,20 +118,18 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-4xl mx-auto text-center px-4">
+      <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 relative">
+        <div className="absolute inset-0 bg-gradient-to-r from-red-600/10 to-blue-600/10"></div>
+        <div className="max-w-4xl mx-auto text-center px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
           >
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Ready to Revamp Your Business?</h2>
-            <p className="text-xl text-gray-600 mb-8">
-              Join hundreds of local businesses who&apos;ve transformed their online presence with Rusty Rock.
-            </p>
+            <h2 className="text-4xl font-bold text-white mb-6">Ready to Revamp Your Business?</h2>
             <Link
-              href="/consultation"
-              className="inline-flex items-center bg-red-600 hover:bg-red-700 text-white px-10 py-5 rounded-lg text-xl font-semibold transition-all duration-200 transform hover:scale-105 gap-2 shadow-lg"
+              href="/contact"
+              className="inline-flex items-center bg-white hover:bg-gray-100 text-red-600 px-10 py-5 rounded-lg text-xl font-semibold transition-all duration-200 transform hover:scale-105 gap-2 shadow-lg"
             >
               Start Your Journey <ArrowRight size={24} />
             </Link>
