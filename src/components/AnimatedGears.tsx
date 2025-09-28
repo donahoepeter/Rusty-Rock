@@ -31,8 +31,6 @@ export default function AnimatedGears() {
             const angle = (i * 30) * Math.PI / 180;
             const innerX = 50 + 40 * Math.cos(angle);
             const innerY = 50 + 40 * Math.sin(angle);
-            const outerX = 50 + 48 * Math.cos(angle);
-            const outerY = 50 + 48 * Math.sin(angle);
             return (
               <rect key={i} x={innerX-2} y={innerY-4} width="4" height="8" fill="#dc2626" stroke="#991b1b" strokeWidth="1"
                     transform={`rotate(${i * 30 + 90} ${innerX} ${innerY})`}/>
