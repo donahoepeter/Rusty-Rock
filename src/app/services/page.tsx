@@ -118,7 +118,7 @@ export default function Services() {
       </section>
 
       {/* Services Grid */}
-      <section className="py-20 bg-gradient-to-br from-white via-gray-50 to-red-50">
+      <section className="py-20 bg-gradient-to-br from-white via-gray-50 to-red-100">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">What We Offer</h2>
@@ -133,7 +133,7 @@ export default function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`relative p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-200 ${
-                  service.popular ? 'bg-red-50 border-2 border-red-200' : 'bg-white'
+                  service.popular ? 'bg-red-100 border-2 border-red-200' : 'bg-white'
                 }`}
               >
                 {service.popular && (
@@ -205,7 +205,7 @@ export default function Services() {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-gradient-to-br from-red-50 via-white to-gray-50">
+      <section className="py-20 bg-gradient-to-br from-red-100 via-white to-gray-50">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose Our Services</h2>
@@ -254,7 +254,7 @@ export default function Services() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-red-600 via-red-700 to-red-800 relative overflow-hidden">
+      <section className="py-20 bg-gradient-to-br from-red-600 via-red-700 to-red-700 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/20 to-slate-900/20"></div>
         <div className="max-w-4xl mx-auto text-center px-4 relative z-10">
           <motion.div

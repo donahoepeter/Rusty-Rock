@@ -46,7 +46,7 @@ export default function About() {
       </section>
 
       {/* Story Section */}
-      <section className="py-20 bg-gradient-to-br from-white via-gray-50 to-red-50">
+      <section className="py-20 bg-gradient-to-br from-white via-gray-50 to-red-100">
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -78,7 +78,7 @@ export default function About() {
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              className="bg-gradient-to-br from-red-50 to-red-100 rounded-2xl p-8"
+              className="bg-gradient-to-br from-red-100 to-red-100 rounded-2xl p-8"
             >
               <div className="text-center">
                 <div className="w-20 h-20 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -143,7 +143,7 @@ export default function About() {
       </section>
 
       {/* Meet the Founders Section */}
-      <section className="py-20 bg-gradient-to-br from-red-50 via-white to-gray-50">
+      <section className="py-20 bg-gradient-to-br from-red-100 via-white to-gray-50">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Meet the Founders</h2>
@@ -154,7 +154,7 @@ export default function About() {
             {founders.map((founder, index) => (
               <div
                 key={index}
-                className="bg-gradient-to-br from-white to-red-50 rounded-2xl shadow-lg p-6 hover:shadow-xl transition-all duration-200 hover:scale-105 border border-red-100"
+                className="bg-gradient-to-br from-white to-red-100 rounded-2xl shadow-lg p-6 hover:shadow-xl transition-all duration-200 hover:scale-105 border border-red-100"
               >
                 <div className="text-center mb-6">
                   <div className="relative w-32 h-32 mx-auto mb-4">
@@ -261,7 +261,7 @@ export default function About() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-red-600 via-red-700 to-red-800 relative overflow-hidden">
+      <section className="py-20 bg-gradient-to-br from-red-600 via-red-700 to-red-700 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/20 to-slate-900/20"></div>
         <div className="max-w-4xl mx-auto text-center px-4 relative z-10">
           <motion.div

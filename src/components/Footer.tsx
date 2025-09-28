@@ -8,15 +8,15 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="md:col-span-1">
-            <h3 className="text-2xl font-bold text-red-400 mb-4">Rusty Rock</h3>
+            <h3 className="text-2xl font-bold text-red-600 mb-4">Rusty Rock</h3>
             <p className="text-gray-300 mb-4 leading-relaxed">
               Professional web development for local businesses. Built with trust, delivered with speed.
             </p>
             <div className="flex space-x-4">
-              <a href="mailto:hello@rustyrock.dev" className="text-gray-300 hover:text-red-400 transition-colors">
+              <a href="mailto:hello@rustyrock.dev" className="text-gray-300 hover:text-red-600 transition-colors">
                 <Mail size={20} />
               </a>
-              <a href="tel:+15551234567" className="text-gray-300 hover:text-red-400 transition-colors">
+              <a href="tel:+15551234567" className="text-gray-300 hover:text-red-600 transition-colors">
                 <Phone size={20} />
               </a>
             </div>
@@ -29,7 +29,6 @@ export default function Footer() {
               <li><Link href="/about" className="text-gray-300 hover:text-white transition-colors">About Us</Link></li>
               <li><Link href="/services" className="text-gray-300 hover:text-white transition-colors">Services</Link></li>
               <li><Link href="/contact" className="text-gray-300 hover:text-white transition-colors">Contact</Link></li>
-              <li><Link href="/consultation" className="text-gray-300 hover:text-white transition-colors">Free Consultation</Link></li>
             </ul>
           </div>
 

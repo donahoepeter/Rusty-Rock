@@ -117,7 +117,7 @@ export default function Contact() {
       </section>
 
       {/* Form Section */}
-      <section className="py-20 bg-gradient-to-br from-white via-gray-50 to-red-50">
+      <section className="py-20 bg-gradient-to-br from-white via-gray-50 to-red-100">
         <div className="max-w-3xl mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -139,7 +139,7 @@ export default function Contact() {
                     required
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-red-200 focus:border-red-500 transition-all duration-300 bg-gradient-to-r from-white to-gray-50 hover:border-red-300"
+                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-red-600 focus:border-red-600 transition-all duration-300 bg-gradient-to-r from-white to-gray-50 hover:border-red-600"
                     placeholder="Enter your full name"
                   />
                 </div>
@@ -155,7 +155,7 @@ export default function Contact() {
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-red-200 focus:border-red-500 transition-all duration-300 bg-gradient-to-r from-white to-gray-50 hover:border-red-300"
+                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-red-600 focus:border-red-600 transition-all duration-300 bg-gradient-to-r from-white to-gray-50 hover:border-red-600"
                     placeholder="your.email@example.com"
                   />
                 </div>
@@ -173,7 +173,7 @@ export default function Contact() {
                     required
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-red-200 focus:border-red-500 transition-all duration-300 bg-gradient-to-r from-white to-gray-50 hover:border-red-300"
+                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-red-600 focus:border-red-600 transition-all duration-300 bg-gradient-to-r from-white to-gray-50 hover:border-red-600"
                     placeholder="(555) 123-4567"
                   />
                 </div>
@@ -189,7 +189,7 @@ export default function Contact() {
                     required
                     value={formData.business}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-red-200 focus:border-red-500 transition-all duration-300 bg-gradient-to-r from-white to-gray-50 hover:border-red-300"
+                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-red-600 focus:border-red-600 transition-all duration-300 bg-gradient-to-r from-white to-gray-50 hover:border-red-600"
                     placeholder="Your business name"
                   />
                 </div>
@@ -221,7 +221,7 @@ export default function Contact() {
                     required
                     value={formData.projectType}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-red-200 focus:border-red-500 transition-all duration-300 bg-gradient-to-r from-white to-gray-50 hover:border-red-300"
+                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-red-600 focus:border-red-600 transition-all duration-300 bg-gradient-to-r from-white to-gray-50 hover:border-red-600"
                   >
                     <option value="">Select project type</option>
                     <option value="new-website">New Website</option>
@@ -244,7 +244,7 @@ export default function Contact() {
                     required
                     value={formData.budget}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-red-200 focus:border-red-500 transition-all duration-300 bg-gradient-to-r from-white to-gray-50 hover:border-red-300"
+                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-red-600 focus:border-red-600 transition-all duration-300 bg-gradient-to-r from-white to-gray-50 hover:border-red-600"
                   >
                     <option value="">Select budget range</option>
                     <option value="under-2k">Under $2,000</option>
@@ -268,7 +268,7 @@ export default function Contact() {
                     required
                     value={formData.timeline}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-red-200 focus:border-red-500 transition-all duration-300 bg-gradient-to-r from-white to-gray-50 hover:border-red-300"
+                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-red-600 focus:border-red-600 transition-all duration-300 bg-gradient-to-r from-white to-gray-50 hover:border-red-600"
                   >
                     <option value="">Select timeline</option>
                     <option value="asap">ASAP (Rush job)</option>
@@ -289,7 +289,7 @@ export default function Contact() {
                     required
                     value={formData.region}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-red-200 focus:border-red-500 transition-all duration-300 bg-gradient-to-r from-white to-gray-50 hover:border-red-300"
+                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-red-600 focus:border-red-600 transition-all duration-300 bg-gradient-to-r from-white to-gray-50 hover:border-red-600"
                   >
                     <option value="">Select your region</option>
                     <option value="dmv">DMV Area (DC/MD/VA)</option>
@@ -340,7 +340,7 @@ export default function Contact() {
               <motion.button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-gradient-to-r from-red-500 to-red-700 hover:from-red-600 hover:to-red-800 disabled:opacity-50 text-white py-5 px-8 rounded-xl text-xl font-bold transition-all duration-300 transform hover:scale-105 disabled:transform-none flex items-center justify-center gap-3 shadow-lg hover:shadow-2xl"
+                className="w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-600 hover:to-red-700 disabled:opacity-50 text-white py-5 px-8 rounded-xl text-xl font-bold transition-all duration-300 transform hover:scale-105 disabled:transform-none flex items-center justify-center gap-3 shadow-lg hover:shadow-2xl"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
