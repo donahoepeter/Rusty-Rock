@@ -3,9 +3,7 @@
 import { motion } from 'framer-motion';
 import {
   Globe,
-  ShoppingCart,
   Search,
-  Smartphone,
   Settings,
   BarChart3,
   Palette,
@@ -86,7 +84,7 @@ export default function Services() {
               Our <span className="text-red-600">Services</span>
             </h1>
             <p className="text-xl text-gray-200 leading-relaxed mb-8">
-              Comprehensive web solutions designed specifically for local businesses. From simple to complex, we've got you covered.
+              Comprehensive web solutions designed specifically for local businesses. From simple to complex, we&apos;ve got you covered.
             </p>
             <Link
               href="/contact"
@@ -231,7 +229,7 @@ export default function Services() {
           >
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Online Presence?</h2>
             <p className="text-xl text-red-100 mb-8">
-              Let's discuss how our services can help grow your business.
+              Let&apos;s discuss how our services can help grow your business.
               Free consultation with no obligation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

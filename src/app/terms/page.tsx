@@ -21,7 +21,7 @@ export default function Terms() {
             <section>
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">1. Agreement to Terms</h2>
               <p className="text-gray-700 leading-relaxed">
-                By accessing and using Rusty Rock's services, you accept and agree to be bound by the terms
+                By accessing and using Rusty Rock&apos;s services, you accept and agree to be bound by the terms
                 and provision of this agreement. If you do not agree to abide by the above, please do not
                 use this service.
               </p>
