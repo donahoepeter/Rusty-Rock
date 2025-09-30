@@ -55,22 +55,22 @@ export default function Contact() {
             </div>
             <h1 className="text-4xl font-bold text-gray-900 mb-6">Thank You!</h1>
             <p className="text-xl text-gray-700 mb-8">
-              We&apos;ve received your consultation request. One of our founders will reach out to you within 24 hours to schedule your free consultation.
+              {`We've received your consultation request. One of our founders will reach out to you within 24 hours to schedule your free consultation.`}
             </p>
             <div className="space-y-4 text-left bg-white p-6 rounded-xl border border-green-200">
               <h3 className="text-lg font-semibold text-gray-900 mb-4">What happens next?</h3>
               <div className="space-y-3">
                 <div className="flex items-start space-x-3">
                   <div className="w-6 h-6 bg-red-600 text-white rounded-full flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">1</div>
-                  <p className="text-gray-700">We&apos;ll contact you within 24 hours to schedule your consultation</p>
+                  <p className="text-gray-700">{`We'll contact you within 24 hours to schedule your consultation`}</p>
                 </div>
                 <div className="flex items-start space-x-3">
                   <div className="w-6 h-6 bg-red-600 text-white rounded-full flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">2</div>
-                  <p className="text-gray-700">During the call, we&apos;ll discuss your project in detail</p>
+                  <p className="text-gray-700">{`During the call, we'll discuss your project in detail`}</p>
                 </div>
                 <div className="flex items-start space-x-3">
                   <div className="w-6 h-6 bg-red-600 text-white rounded-full flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">3</div>
-                  <p className="text-gray-700">You&apos;ll receive a custom proposal with transparent pricing</p>
+                  <p className="text-gray-700">{`You'll receive a custom proposal with transparent pricing`}</p>
                 </div>
               </div>
             </div>
@@ -95,8 +95,7 @@ export default function Contact() {
               <span className="text-red-600">Contact</span> Us
             </h1>
             <p className="text-xl text-gray-200 leading-relaxed mb-8">
-              Let&apos;s discuss your project and create a custom solution that fits your budget and timeline.
-              No pressure, no obligation - just honest advice from real experts.
+              {`Let's discuss your project and create a custom solution that fits your budget and timeline. No pressure, no obligation - just honest advice from real experts.`}
             </p>
 
             {/* Benefits */}
@@ -275,7 +274,7 @@ export default function Contact() {
                     <option value="1-2weeks">1-2 weeks</option>
                     <option value="1month">Within 1 month</option>
                     <option value="2-3months">2-3 months</option>
-                    <option value="flexible">I&apos;m flexible</option>
+                    <option value="flexible">{`I'm flexible`}</option>
                   </select>
                 </div>
 

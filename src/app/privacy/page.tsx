@@ -21,9 +21,7 @@ export default function Privacy() {
             <section>
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">1. Introduction</h2>
               <p className="text-gray-700 leading-relaxed">
-                Risepath Digital (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) respects your privacy and is committed to protecting your personal data.
-                This privacy policy explains how we collect, use, disclose, and safeguard your information when you visit
-                our website or use our services.
+                {`Risepath Digital ("we," "our," or "us") respects your privacy and is committed to protecting your personal data. This privacy policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.`}
               </p>
             </section>
 
@@ -123,7 +121,7 @@ export default function Privacy() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">10. Children&apos;s Privacy</h2>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">{`10. Children's Privacy`}</h2>
               <p className="text-gray-700 leading-relaxed">
                 Our services are not directed to individuals under 18 years of age. We do not knowingly collect
                 personal information from children under 18.
@@ -133,8 +131,7 @@ export default function Privacy() {
             <section>
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">11. Updates to This Policy</h2>
               <p className="text-gray-700 leading-relaxed">
-                We may update this privacy policy from time to time. We will notify you of any material changes
-                by posting the updated policy on our website and updating the &quot;Last Updated&quot; date.
+                {`We may update this privacy policy from time to time. We will notify you of any material changes by posting the updated policy on our website and updating the "Last Updated" date.`}
               </p>
             </section>
 
