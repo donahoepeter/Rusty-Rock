@@ -38,8 +38,8 @@ export default function About() {
               About <span className="text-red-600">Rusty Rock</span>
             </h1>
             <p className="text-xl text-gray-200 leading-relaxed">
-              We&apos;re not just another web agency. We&apos;re local business owners who understand
-              the challenges you face because we&apos;ve faced them ourselves.
+              We're not just another web agency. We're local business owners who understand
+              the challenges you face because we've faced them ourselves.
             </p>
           </motion.div>
         </div>
@@ -109,12 +109,12 @@ export default function About() {
               {
                 icon: <Shield className="w-8 h-8 text-red-600" />,
                 title: "Trustworthy",
-                description: "We do what we say we&apos;ll do, when we say we&apos;ll do it. No hidden fees, no surprises."
+                description: "We do what we say we'll do, when we say we'll do it. No hidden fees, no surprises."
               },
               {
                 icon: <Heart className="w-8 h-8 text-red-600" />,
                 title: "Personal Touch",
-                description: "You&apos;ll work directly with Thomas and Peter. We&apos;re not hiding behind account managers."
+                description: "You'll work directly with Thomas and Peter. We're not hiding behind account managers."
               },
               {
                 icon: <Target className="w-8 h-8 text-red-600" />,
@@ -235,7 +235,7 @@ export default function About() {
                   <div className="w-2 h-2 bg-red-600 rounded-full mt-3 flex-shrink-0"></div>
                   <div>
                     <h3 className="font-semibold text-white mb-2">Affordable Pricing</h3>
-                    <p className="text-gray-200">Quality doesn&apos;t have to break the bank. Fair, transparent pricing.</p>
+                    <p className="text-gray-200">Quality doesn't have to break the bank. Fair, transparent pricing.</p>
                   </div>
                 </div>
 
@@ -243,7 +243,7 @@ export default function About() {
                   <div className="w-2 h-2 bg-red-600 rounded-full mt-3 flex-shrink-0"></div>
                   <div>
                     <h3 className="font-semibold text-white mb-2">Ongoing Support</h3>
-                    <p className="text-gray-200">We don&apos;t disappear after launch. Ongoing support and maintenance.</p>
+                    <p className="text-gray-200">We don't disappear after launch. Ongoing support and maintenance.</p>
                   </div>
                 </div>
 

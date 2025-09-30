@@ -86,12 +86,12 @@ export default function Home() {
               {
                 icon: <DollarSign className="w-8 h-8 text-red-600" />,
                 title: "Affordable Solutions",
-                description: "Quality websites that won&apos;t break the bank. Transparent pricing."
+                description: "Quality websites that won't break the bank. Pricing that works for you."
               },
               {
                 icon: <Clock className="w-8 h-8 text-red-600" />,
                 title: "Lightning Fast",
-                description: "Get your website live in days, not months. Speed is our specialty."
+                description: "Get your website live in days, not months. The combination of speed and quality is our specialty."
               },
               {
                 icon: <Zap className="w-8 h-8 text-red-600" />,

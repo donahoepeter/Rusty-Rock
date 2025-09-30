@@ -21,43 +21,25 @@ export default function Services() {
       icon: <Globe className="w-8 h-8 text-red-600" />,
       title: "Professional Websites",
       description: "Modern, responsive websites that look great on all devices.",
-      features: ["Mobile-responsive design", "Fast loading speeds", "SEO-optimized", "Content management system"],
-      popular: true
-    },
-    {
-      icon: <ShoppingCart className="w-8 h-8 text-red-600" />,
-      title: "E-commerce Solutions",
-      description: "Complete online stores with payment processing and inventory management.",
-      features: ["Secure payment processing", "Inventory management", "Order tracking", "Customer accounts"],
-      popular: false
+      features: ["Mobile-responsive design", "Fast loading speeds", "SEO-optimized", "Content management system"]
     },
     {
       icon: <Search className="w-8 h-8 text-red-600" />,
       title: "SEO Optimization",
       description: "Get found on Google with our comprehensive SEO services.",
-      features: ["Keyword research", "On-page optimization", "Local SEO", "Performance monitoring"],
-      popular: false
-    },
-    {
-      icon: <Smartphone className="w-8 h-8 text-red-600" />,
-      title: "Mobile Apps",
-      description: "Custom mobile applications for iOS and Android platforms.",
-      features: ["Cross-platform development", "Native performance", "App store optimization", "Push notifications"],
-      popular: false
+      features: ["Keyword research", "On-page optimization", "Local SEO", "Performance monitoring"]
     },
     {
       icon: <Settings className="w-8 h-8 text-red-600" />,
       title: "Website Maintenance",
       description: "Keep your website secure, updated, and running smoothly.",
-      features: ["Security updates", "Content updates", "Backup management", "Performance monitoring"],
-      popular: false
+      features: ["Security updates", "Content updates", "Backup management", "Performance monitoring"]
     },
     {
       icon: <BarChart3 className="w-8 h-8 text-red-600" />,
       title: "Analytics & Insights",
       description: "Understand your website performance and customer behavior.",
-      features: ["Traffic analysis", "Conversion tracking", "User behavior insights", "Monthly reports"],
-      popular: false
+      features: ["Traffic analysis", "Conversion tracking", "User behavior insights", "Monthly reports"]
     }
   ];
 
@@ -104,8 +86,7 @@ export default function Services() {
               Our <span className="text-red-600">Services</span>
             </h1>
             <p className="text-xl text-gray-200 leading-relaxed mb-8">
-              Comprehensive web solutions designed specifically for local businesses.
-              From simple websites to complex e-commerce platforms, we&apos;ve got you covered.
+              Comprehensive web solutions designed specifically for local businesses. From simple to complex, we've got you covered.
             </p>
             <Link
               href="/contact"
@@ -125,24 +106,15 @@ export default function Services() {
             <p className="text-xl text-gray-600">Professional services tailored to your business needs</p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className={`relative p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-200 ${
-                  service.popular ? 'bg-red-100 border-2 border-red-200' : 'bg-white'
-                }`}
+                className="relative p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-200 bg-white"
               >
-                {service.popular && (
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-red-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
-                      Most Popular
-                    </span>
-                  </div>
-                )}
 
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-red-100 rounded-full mb-6">
                   {service.icon}
@@ -216,23 +188,19 @@ export default function Services() {
             {[
               {
                 icon: <Shield className="w-8 h-8 text-red-600" />,
-                title: "Secure & Reliable",
-                description: "Enterprise-grade security and 99.9% uptime guarantee"
+                title: "Secure & Reliable"
               },
               {
                 icon: <Palette className="w-8 h-8 text-red-600" />,
-                title: "Custom Design",
-                description: "Unique designs that reflect your brand identity"
+                title: "Custom Design"
               },
               {
                 icon: <Settings className="w-8 h-8 text-red-600" />,
-                title: "Easy to Manage",
-                description: "User-friendly content management systems"
+                title: "Easy to Manage"
               },
               {
                 icon: <BarChart3 className="w-8 h-8 text-red-600" />,
-                title: "Data-Driven",
-                description: "Built-in analytics to track your success"
+                title: "Data-Driven"
               }
             ].map((feature, index) => (
               <motion.div
@@ -264,7 +232,7 @@ export default function Services() {
           >
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Online Presence?</h2>
             <p className="text-xl text-red-100 mb-8">
-              Let&apos;s discuss how our services can help grow your business.
+              Let's discuss how our services can help grow your business.
               Free consultation with no obligation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
