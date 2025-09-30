@@ -9,22 +9,22 @@ export default function About() {
   const founders = [
     {
       name: "Peter Donahoe",
-      role: "DMV Region Lead",
+      role: "DC Metro Region Lead",
       image: "/peter-profile.jpeg",
-      email: "peter@rustyrock.dev",
+      email: "peter@risepathdigital.com",
       phone: "+1 (555) 123-4567"
     },
     {
       name: "Thomas Rust",
       role: "New England Region Lead",
       image: "/thomas-profile.jpeg",
-      email: "thomas@rustyrock.dev",
+      email: "thomas@risepathdigital.com",
       phone: "+1 (555) 987-6543"
     }
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gray-100">
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-red-600/10 to-blue-600/10"></div>
@@ -35,11 +35,11 @@ export default function About() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-5xl font-bold text-white mb-6">
-              About <span className="text-red-600">Rusty Rock</span>
+              About <span className="text-red-600">Risepath Digital</span>
             </h1>
             <p className="text-xl text-gray-200 leading-relaxed">
-              We&apos;re not just another web agency. We&apos;re local business owners who understand
-              the challenges you face because we&apos;ve faced them ourselves.
+              We're not just another web agency. We're local business owners who understand
+              the challenges you face because we've faced them ourselves.
             </p>
           </motion.div>
         </div>
@@ -57,7 +57,7 @@ export default function About() {
               <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Story</h2>
               <div className="space-y-4 text-lg text-gray-700 leading-relaxed">
                 <p>
-                  Founded by Thomas Rust and Peter Donahoe, Rusty Rock was born from a simple
+                  Founded by Thomas Rust and Peter Donahoe, Risepath Digital was born from a simple
                   realization: local businesses deserve the same quality web presence as Fortune 500
                   companies, but at prices that make sense for small business budgets.
                 </p>
@@ -86,8 +86,7 @@ export default function About() {
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
                 <p className="text-lg text-gray-700">
-                  To democratize professional web presence for local businesses by combining
-                  cutting-edge technology with genuine care and transparent communication.
+                  We empower local businesses with affordable, high-performing websites that build trust, drive growth, and bring big-agency results without the big-agency cost.
                 </p>
               </div>
             </motion.div>
@@ -109,12 +108,12 @@ export default function About() {
               {
                 icon: <Shield className="w-8 h-8 text-red-600" />,
                 title: "Trustworthy",
-                description: "We do what we say we&apos;ll do, when we say we&apos;ll do it. No hidden fees, no surprises."
+                description: "We do what we say we'll do, when we say we'll do it. No hidden fees, no surprises."
               },
               {
                 icon: <Heart className="w-8 h-8 text-red-600" />,
                 title: "Personal Touch",
-                description: "You&apos;ll work directly with Thomas and Peter. We&apos;re not hiding behind account managers."
+                description: "You'll work directly with Thomas and Peter. We're not hiding behind account managers."
               },
               {
                 icon: <Target className="w-8 h-8 text-red-600" />,
@@ -225,7 +224,7 @@ export default function About() {
                   <div className="w-2 h-2 bg-red-600 rounded-full mt-3 flex-shrink-0"></div>
                   <div>
                     <h3 className="font-semibold text-white mb-2">Local Support</h3>
-                    <p className="text-gray-200">Thomas covers New England, Peter covers the DMV area.</p>
+                    <p className="text-gray-200">Thomas covers New England, Peter covers the DC Metro area.</p>
                   </div>
                 </div>
               </div>
@@ -235,7 +234,7 @@ export default function About() {
                   <div className="w-2 h-2 bg-red-600 rounded-full mt-3 flex-shrink-0"></div>
                   <div>
                     <h3 className="font-semibold text-white mb-2">Affordable Pricing</h3>
-                    <p className="text-gray-200">Quality doesn&apos;t have to break the bank. Fair, transparent pricing.</p>
+                    <p className="text-gray-200">Quality doesn't have to break the bank. Fair, transparent pricing.</p>
                   </div>
                 </div>
 
@@ -243,7 +242,7 @@ export default function About() {
                   <div className="w-2 h-2 bg-red-600 rounded-full mt-3 flex-shrink-0"></div>
                   <div>
                     <h3 className="font-semibold text-white mb-2">Ongoing Support</h3>
-                    <p className="text-gray-200">We don&apos;t disappear after launch. Ongoing support and maintenance.</p>
+                    <p className="text-gray-200">We don't disappear after launch. Ongoing support and maintenance.</p>
                   </div>
                 </div>
 

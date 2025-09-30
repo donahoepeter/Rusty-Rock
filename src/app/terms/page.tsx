@@ -1,13 +1,13 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Terms of Service | Rusty Rock',
-  description: 'Terms of Service for Rusty Rock web development services.',
+  title: 'Terms of Service | Risepath Digital',
+  description: 'Terms of Service for Risepath Digital web development services.',
 };
 
 export default function Terms() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gray-100">
       <div className="max-w-4xl mx-auto px-4 py-20">
         <div className="prose prose-lg mx-auto">
           <h1 className="text-4xl font-bold text-gray-900 mb-8">Terms of Service</h1>
@@ -21,7 +21,7 @@ export default function Terms() {
             <section>
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">1. Agreement to Terms</h2>
               <p className="text-gray-700 leading-relaxed">
-                By accessing and using Rusty Rock&apos;s services, you accept and agree to be bound by the terms
+                By accessing and using Risepath Digital's services, you accept and agree to be bound by the terms
                 and provision of this agreement. If you do not agree to abide by the above, please do not
                 use this service.
               </p>
@@ -30,7 +30,7 @@ export default function Terms() {
             <section>
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">2. Services Description</h2>
               <p className="text-gray-700 leading-relaxed mb-4">
-                Rusty Rock provides web development and digital marketing services including but not limited to:
+                Risepath Digital provides web development and digital marketing services including but not limited to:
               </p>
               <ul className="list-disc pl-6 space-y-2 text-gray-700">
                 <li>Website design and development</li>
@@ -151,7 +151,7 @@ export default function Terms() {
                 completed up to the termination date.
               </p>
 
-              <h3 className="text-xl font-medium text-gray-900 mb-3">10.2 Termination by Rusty Rock</h3>
+              <h3 className="text-xl font-medium text-gray-900 mb-3">10.2 Termination by Risepath Digital</h3>
               <p className="text-gray-700 leading-relaxed">
                 We may terminate agreements for non-payment, breach of terms, or if the client relationship
                 becomes unreasonably difficult to maintain.
@@ -205,8 +205,8 @@ export default function Terms() {
                 For questions regarding these terms, please contact us:
               </p>
               <div className="bg-gray-50 p-6 rounded-lg">
-                <p className="text-gray-700"><strong>Rusty Rock</strong></p>
-                <p className="text-gray-700">Email: legal@rustyrock.dev</p>
+                <p className="text-gray-700"><strong>Risepath Digital</strong></p>
+                <p className="text-gray-700">Email: legal@risepathdigital.com</p>
                 <p className="text-gray-700">Phone: (555) 123-4567</p>
               </div>
             </section>

@@ -7,7 +7,7 @@ import AnimatedGears from '@/components/AnimatedGears';
 
 export default function Home() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-gray-100">
       {/* Hero Section */}
       <section
         className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 overflow-hidden"
@@ -30,9 +30,9 @@ export default function Home() {
               transition={{ duration: 0.4, delay: 0.1 }}
               className="text-6xl md:text-7xl font-bold mb-6"
             >
-              <span className="text-red-600">Revamping</span>
+              <span className="text-red-600">Professional</span> <span className="text-gray-800">Site,</span>
               <br />
-              <span className="text-gray-800">the Mom and Pop Shop</span>
+              <span className="text-red-600">Affordable</span> <span className="text-gray-800">Price</span>
             </motion.h1>
 
             <motion.p
@@ -72,7 +72,7 @@ export default function Home() {
       <section className="py-20 bg-gradient-to-br from-white via-gray-50 to-red-100">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose <span className="text-red-600">Rusty Rock</span>?</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose <span className="text-red-600">Risepath Digital</span>?</h2>
             <p className="text-xl text-gray-600">We understand local businesses because we are one</p>
           </div>
 

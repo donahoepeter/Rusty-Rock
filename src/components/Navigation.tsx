@@ -3,7 +3,8 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import { usePathname } from 'next/navigation';
-import { Menu, X, Settings } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import Image from 'next/image';
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,19 +25,24 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="bg-gradient-to-r from-white via-gray-50 to-white shadow-2xl sticky top-0 z-50 border-b-4 border-red-600 relative">
-      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-red-600 via-red-600 to-red-600"></div>
+    <nav className="bg-gradient-to-r from-white via-gray-50 to-white shadow-lg sticky top-0 z-50 relative">
+      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-b from-gray-200 to-gray-300"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <Link href="/" className="flex items-center group">
-            <div className="flex items-center space-x-3 bg-gradient-to-r from-red-100 to-gray-100 px-4 py-2 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-              <div className="relative">
-                <Settings className="w-10 h-10 text-gray-700 group-hover:rotate-180 transition-transform duration-500 drop-shadow-md" />
-                <div className="absolute inset-0 w-10 h-10 bg-red-100 rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+            <div className="flex items-center space-x-3 px-2 py-2 rounded-xl transition-all duration-300 hover:scale-105">
+              <div className="relative w-10 h-10">
+                <Image
+                  src="/risepath-logo.svg"
+                  alt="Risepath Digital Logo"
+                  width={40}
+                  height={40}
+                  className="w-full h-full object-contain"
+                />
               </div>
-              <div className="text-3xl font-bold">
-                <span className="text-red-600 drop-shadow-sm">Rusty</span>
-                <span className="text-black drop-shadow-sm"> Rock</span>
+              <div className="text-2xl font-bold">
+                <span className="text-red-600 drop-shadow-sm">Risepath</span>
+                <span className="text-black drop-shadow-sm"> Digital</span>
               </div>
             </div>
           </Link>

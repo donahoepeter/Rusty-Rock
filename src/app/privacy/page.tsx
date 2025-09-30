@@ -1,13 +1,13 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy | Rusty Rock',
-  description: 'Privacy Policy for Rusty Rock web development services.',
+  title: 'Privacy Policy | Risepath Digital',
+  description: 'Privacy Policy for Risepath Digital web development services.',
 };
 
 export default function Privacy() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gray-100">
       <div className="max-w-4xl mx-auto px-4 py-20">
         <div className="prose prose-lg mx-auto">
           <h1 className="text-4xl font-bold text-gray-900 mb-8">Privacy Policy</h1>
@@ -21,7 +21,7 @@ export default function Privacy() {
             <section>
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">1. Introduction</h2>
               <p className="text-gray-700 leading-relaxed">
-                Rusty Rock (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) respects your privacy and is committed to protecting your personal data.
+                Risepath Digital ("we," "our," or "us") respects your privacy and is committed to protecting your personal data.
                 This privacy policy explains how we collect, use, disclose, and safeguard your information when you visit
                 our website or use our services.
               </p>
@@ -123,7 +123,7 @@ export default function Privacy() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">10. Children&apos;s Privacy</h2>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">10. Children's Privacy</h2>
               <p className="text-gray-700 leading-relaxed">
                 Our services are not directed to individuals under 18 years of age. We do not knowingly collect
                 personal information from children under 18.
@@ -134,7 +134,7 @@ export default function Privacy() {
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">11. Updates to This Policy</h2>
               <p className="text-gray-700 leading-relaxed">
                 We may update this privacy policy from time to time. We will notify you of any material changes
-                by posting the updated policy on our website and updating the &quot;Last Updated&quot; date.
+                by posting the updated policy on our website and updating the "Last Updated" date.
               </p>
             </section>
 
@@ -144,8 +144,8 @@ export default function Privacy() {
                 If you have any questions about this privacy policy or our privacy practices, please contact us:
               </p>
               <div className="bg-gray-50 p-6 rounded-lg">
-                <p className="text-gray-700"><strong>Rusty Rock</strong></p>
-                <p className="text-gray-700">Email: privacy@rustyrock.dev</p>
+                <p className="text-gray-700"><strong>Risepath Digital</strong></p>
+                <p className="text-gray-700">Email: privacy@risepathdigital.com</p>
                 <p className="text-gray-700">Phone: (555) 123-4567</p>
               </div>
             </section>

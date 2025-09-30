@@ -5,7 +5,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Rusty Rock | Web Development for Local Businesses",
+  title: "Risepath Digital | Web Development for Local Businesses",
   description: "Professional web development services for local businesses. Affordable, fast, and AI-powered solutions with a personal touch.",
 };
 

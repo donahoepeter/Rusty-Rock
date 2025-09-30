@@ -1,8 +1,19 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
 
 export default function AnimatedGears() {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
+
   return (
     <div className="absolute inset-0 overflow-hidden opacity-60 pointer-events-none z-0">
       {/* Large Red Gear */}

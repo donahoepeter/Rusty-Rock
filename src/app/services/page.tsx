@@ -70,7 +70,7 @@ export default function Services() {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gray-100">
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-red-600/10 to-blue-600/10"></div>
@@ -84,7 +84,7 @@ export default function Services() {
               Our <span className="text-red-600">Services</span>
             </h1>
             <p className="text-xl text-gray-200 leading-relaxed mb-8">
-              Comprehensive web solutions designed specifically for local businesses. From simple to complex, we&apos;ve got you covered.
+              Comprehensive web solutions designed specifically for local businesses. From simple to complex, we've got you covered.
             </p>
             <Link
               href="/contact"
@@ -229,7 +229,7 @@ export default function Services() {
           >
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Online Presence?</h2>
             <p className="text-xl text-red-100 mb-8">
-              Let&apos;s discuss how our services can help grow your business.
+              Let's discuss how our services can help grow your business.
               Free consultation with no obligation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

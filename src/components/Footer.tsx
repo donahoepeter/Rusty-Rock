@@ -8,12 +8,12 @@ export default function Footer() {
         <div className="grid md:grid-cols-3 gap-8">
           {/* Company Info */}
           <div className="md:col-span-1">
-            <h3 className="text-2xl font-bold text-red-600 mb-4">Rusty Rock</h3>
+            <h3 className="text-2xl font-bold text-red-600 mb-4">Risepath Digital</h3>
             <p className="text-gray-300 mb-4 leading-relaxed">
               Professional web development for local businesses. Built with trust, delivered with speed.
             </p>
             <div className="flex space-x-4">
-              <a href="mailto:hello@rustyrock.dev" className="text-gray-300 hover:text-red-600 transition-colors">
+              <a href="mailto:hello@risepathdigital.com" className="text-gray-300 hover:text-red-600 transition-colors">
                 <Mail size={20} />
               </a>
               <a href="tel:+15551234567" className="text-gray-300 hover:text-red-600 transition-colors">
@@ -37,7 +37,7 @@ export default function Footer() {
             <h4 className="text-lg font-semibold mb-4">Service Areas</h4>
             <div className="space-y-4 text-gray-300">
               <div>
-                <h5 className="font-medium text-white mb-2">DMV Area</h5>
+                <h5 className="font-medium text-white mb-2">DC Metro Area</h5>
                 <div className="flex items-start space-x-2">
                   <MapPin size={16} className="mt-1 flex-shrink-0" />
                   <span className="text-sm">Washington DC, Maryland, Virginia</span>
@@ -57,7 +57,7 @@ export default function Footer() {
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm mb-4 md:mb-0">
-              © {new Date().getFullYear()} Rusty Rock. All rights reserved.
+              © {new Date().getFullYear()} Risepath Digital. All rights reserved.
             </p>
           </div>
         </div>
