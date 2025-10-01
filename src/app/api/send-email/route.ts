@@ -9,7 +9,7 @@ export async function POST(request: Request) {
     const { name, email, phone, company, projectType, budget, timeline, region, description } = body;
 
     const { data, error } = await resend.emails.send({
-      from: 'Risepath Digital <noreply@risepathdigital.com>',
+      from: 'Risepath Digital <noreply@mail.risepathdigital.com>',
       to: ['peter@risepathdigital.com', 'tom@risepathdigital.com'],
       subject: `New Consultation Request from ${name}`,
       html: `
