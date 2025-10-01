@@ -33,11 +33,26 @@ export default function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1500));
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
 
-    setIsSubmitted(true);
-    setIsSubmitting(false);
+      if (!response.ok) {
+        throw new Error('Failed to send email');
+      }
+
+      setIsSubmitted(true);
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('There was an error submitting your form. Please try again or email us directly at peter@risepathdigital.com');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (isSubmitted) {
