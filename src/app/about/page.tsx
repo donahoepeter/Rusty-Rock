@@ -11,15 +11,13 @@ export default function About() {
       name: "Peter Donahoe",
       role: "DC Metro Region Lead",
       image: "/peter-profile.jpeg",
-      email: "peter@risepathdigital.com",
-      phone: "+1 (555) 123-4567"
+      email: "peter@risepathdigital.com"
     },
     {
       name: "Thomas Rust",
       role: "New England Region Lead",
       image: "/thomas-profile.jpeg",
-      email: "thomas@risepathdigital.com",
-      phone: "+1 (555) 987-6543"
+      email: "thomas@risepathdigital.com"
     }
   ];
 
@@ -175,13 +173,6 @@ export default function About() {
                   >
                     <Mail className="w-4 h-4 mr-1" />
                     Email
-                  </a>
-                  <a
-                    href={`tel:${founder.phone}`}
-                    className="flex items-center border-2 border-red-600 text-red-600 hover:bg-red-600 hover:text-white px-4 py-2 rounded-lg transition-colors duration-200 text-sm"
-                  >
-                    <Phone className="w-4 h-4 mr-1" />
-                    Call
                   </a>
                 </div>
               </div>

@@ -205,7 +205,6 @@ export default function Terms() {
               <div className="bg-gray-50 p-6 rounded-lg">
                 <p className="text-gray-700"><strong>Risepath Digital</strong></p>
                 <p className="text-gray-700">Email: legal@risepathdigital.com</p>
-                <p className="text-gray-700">Phone: (555) 123-4567</p>
               </div>
             </section>
 
