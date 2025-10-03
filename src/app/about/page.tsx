@@ -11,13 +11,13 @@ export default function About() {
       name: "Peter Donahoe",
       role: "DC Metro Region Lead",
       image: "/peter-profile.jpeg",
-      email: "peter@risepathdigital.com"
+      email: "peter@lowlightdigital.com"
     },
     {
       name: "Thomas Rust",
       role: "New England Region Lead",
       image: "/thomas-profile.jpeg",
-      email: "thomas@risepathdigital.com"
+      email: "thomas@lowlightdigital.com"
     }
   ];
 
@@ -33,7 +33,7 @@ export default function About() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-5xl font-bold text-white mb-6">
-              About <span className="text-red-600">Risepath Digital</span>
+              About <span className="text-red-600">Lowlight Digital</span>
             </h1>
             <p className="text-xl text-gray-200 leading-relaxed">
               {`We're not just another web agency. We're local business owners who understand the challenges you face because we've faced them ourselves.`}
@@ -54,7 +54,7 @@ export default function About() {
               <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Story</h2>
               <div className="space-y-4 text-lg text-gray-700 leading-relaxed">
                 <p>
-                  Founded by Thomas Rust and Peter Donahoe, Risepath Digital was born from a simple
+                  Founded by Thomas Rust and Peter Donahoe, Lowlight Digital was born from a simple
                   realization: local businesses deserve the same quality web presence as Fortune 500
                   companies, but at prices that make sense for small business budgets.
                 </p>

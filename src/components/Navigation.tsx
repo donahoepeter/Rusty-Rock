@@ -34,14 +34,14 @@ export default function Navigation() {
               <div className="relative w-10 h-10">
                 <Image
                   src="/risepath-logo.svg"
-                  alt="Risepath Digital Logo"
+                  alt="Lowlight Digital Logo"
                   width={40}
                   height={40}
                   className="w-full h-full object-contain"
                 />
               </div>
               <div className="text-2xl font-bold">
-                <span className="text-red-600 drop-shadow-sm">Risepath</span>
+                <span className="text-red-600 drop-shadow-sm">Lowlight</span>
                 <span className="text-black drop-shadow-sm"> Digital</span>
               </div>
             </div>

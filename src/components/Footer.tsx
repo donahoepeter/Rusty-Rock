@@ -8,12 +8,12 @@ export default function Footer() {
         <div className="grid md:grid-cols-3 gap-8">
           {/* Company Info */}
           <div className="md:col-span-1">
-            <h3 className="text-2xl font-bold text-red-600 mb-4">Risepath Digital</h3>
+            <h3 className="text-2xl font-bold text-red-600 mb-4">Lowlight Digital</h3>
             <p className="text-gray-300 mb-4 leading-relaxed">
               Professional web development for local businesses. Built with trust, delivered with speed.
             </p>
             <div className="flex space-x-4">
-              <a href="mailto:hello@risepathdigital.com" className="text-gray-300 hover:text-red-600 transition-colors">
+              <a href="mailto:hello@lowlightdigital.com" className="text-gray-300 hover:text-red-600 transition-colors">
                 <Mail size={20} />
               </a>
             </div>
@@ -54,7 +54,7 @@ export default function Footer() {
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm mb-4 md:mb-0">
-              © {new Date().getFullYear()} Risepath Digital. All rights reserved.
+              © {new Date().getFullYear()} Lowlight Digital. All rights reserved.
             </p>
           </div>
         </div>

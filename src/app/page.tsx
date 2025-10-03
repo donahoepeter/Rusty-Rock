@@ -72,7 +72,7 @@ export default function Home() {
       <section className="py-20 bg-gradient-to-br from-white via-gray-50 to-red-100">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose <span className="text-red-600">Risepath Digital</span>?</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose <span className="text-red-600">Lowlight Digital</span>?</h2>
             <p className="text-xl text-gray-600">We understand local businesses because we are one</p>
           </div>
 

@@ -372,7 +372,7 @@ export default function Contact() {
               </motion.button>
 
               <p className="text-center text-sm text-gray-600 mt-4">
-                By submitting this form, you agree to be contacted by Risepath Digital about your project.
+                By submitting this form, you agree to be contacted by Lowlight Digital about your project.
                 We respect your privacy and will never share your information.
               </p>
             </form>

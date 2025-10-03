@@ -1,8 +1,8 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy | Risepath Digital',
-  description: 'Privacy Policy for Risepath Digital web development services.',
+  title: 'Privacy Policy | Lowlight Digital',
+  description: 'Privacy Policy for Lowlight Digital web development services.',
 };
 
 export default function Privacy() {
@@ -21,7 +21,7 @@ export default function Privacy() {
             <section>
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">1. Introduction</h2>
               <p className="text-gray-700 leading-relaxed">
-                {`Risepath Digital ("we," "our," or "us") respects your privacy and is committed to protecting your personal data. This privacy policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.`}
+                {`Lowlight Digital ("we," "our," or "us") respects your privacy and is committed to protecting your personal data. This privacy policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.`}
               </p>
             </section>
 
@@ -141,8 +141,8 @@ export default function Privacy() {
                 If you have any questions about this privacy policy or our privacy practices, please contact us:
               </p>
               <div className="bg-gray-50 p-6 rounded-lg">
-                <p className="text-gray-700"><strong>Risepath Digital</strong></p>
-                <p className="text-gray-700">Email: privacy@risepathdigital.com</p>
+                <p className="text-gray-700"><strong>Lowlight Digital</strong></p>
+                <p className="text-gray-700">Email: privacy@lowlightdigital.com</p>
               </div>
             </section>
           </div>
