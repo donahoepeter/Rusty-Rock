@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
-import Image from 'next/image';
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,16 +29,7 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <Link href="/" className="flex items-center group">
-            <div className="flex items-center space-x-3 px-2 py-2 rounded-xl transition-all duration-300 hover:scale-105">
-              <div className="relative w-10 h-10">
-                <Image
-                  src="/risepath-logo.svg"
-                  alt="Lowlight Digital Logo"
-                  width={40}
-                  height={40}
-                  className="w-full h-full object-contain"
-                />
-              </div>
+            <div className="flex items-center px-2 py-2 rounded-xl transition-all duration-300 hover:scale-105">
               <div className="text-2xl font-bold">
                 <span className="text-red-600 drop-shadow-sm">Lowlight</span>
                 <span className="text-black drop-shadow-sm"> Digital</span>
