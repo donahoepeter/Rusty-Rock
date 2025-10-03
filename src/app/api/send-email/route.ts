@@ -9,8 +9,8 @@ export async function POST(request: Request) {
     const { name, email, phone, company, projectType, budget, timeline, region, description } = body;
 
     const { data, error } = await resend.emails.send({
-      from: 'Risepath Digital <noreply@mail.risepathdigital.com>',
-      to: ['peter@risepathdigital.com', 'tom@risepathdigital.com'],
+      from: 'Lowlight Digital <noreply@mail.lowlightdigital.com>',
+      to: ['peter@lowlightdigital.com', 'tom@lowlightdigital.com'],
       subject: `New Consultation Request from ${name}`,
       html: `
         <h2>New Consultation Request</h2>
@@ -25,7 +25,7 @@ export async function POST(request: Request) {
         <p><strong>Project Description:</strong></p>
         <p>${description}</p>
         <hr>
-        <p><em>This inquiry was submitted from risepathdigital.com</em></p>
+        <p><em>This inquiry was submitted from lowlightdigital.com</em></p>
       `,
     });
 

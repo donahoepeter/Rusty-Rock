@@ -49,7 +49,7 @@ export default function Contact() {
       setIsSubmitted(true);
     } catch (error) {
       console.error('Error submitting form:', error);
-      alert('There was an error submitting your form. Please try again or email us directly at peter@risepathdigital.com');
+      alert('There was an error submitting your form. Please try again or email us directly at peter@lowlightdigital.com');
     } finally {
       setIsSubmitting(false);
     }
