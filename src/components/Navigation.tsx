@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
@@ -28,12 +29,16 @@ export default function Navigation() {
       <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-b from-gray-200 to-gray-300"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          <Link href="/" className="flex items-center group">
-            <div className="flex items-center px-2 py-2 rounded-xl transition-all duration-300 hover:scale-105">
-              <div className="text-2xl font-bold">
-                <span className="text-red-600 drop-shadow-sm">Lowlight</span>
-                <span className="text-black drop-shadow-sm"> Digital</span>
-              </div>
+          <Link href="/" className="flex items-center group -ml-2">
+            <div className="flex items-center transition-all duration-300 hover:scale-105">
+              <Image
+                src="/lowlight-logo-full.png"
+                alt="Lowlight Digital"
+                width={300}
+                height={39}
+                priority
+                className="h-10 w-auto"
+              />
             </div>
           </Link>
 
