@@ -1,8 +1,8 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import PlausibleProvider from "next-plausible";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Lowlight Digital | Web Development for Local Businesses",
@@ -21,7 +21,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className="antialiased">
-        <PlausibleProvider domain={process.env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN || "localhost"} />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-XMLN4MLE0S"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-XMLN4MLE0S');
+          `}
+        </Script>
         <Navigation />
         <main>{children}</main>
         <Footer />
